@@ -130,12 +130,13 @@ function HomeSection({ language }) {
             </p>
           </div>
         </div>
-        <div className="hidden md:block   w-1/2 flex justify-center items-center">
-          <div className="relative -translate-y-[100px] translate-x-[100px] ">
+        <div className="w-full md:w-1/2 flex justify-center items-center">
+          <div className="relative md:-translate-y-[100px] md:translate-x-[100px]">
             <img
               src="foto.png"
               alt="Profile"
-              className="w-120 h-120  object-cover"/>
+              className="w-40 h-40 md:w-120 md:h-120 object-cover"
+            />
           </div>
         </div>
       </div>
@@ -335,13 +336,13 @@ function ContactSection({ language }) {
               </div>
               <div className="flex flex-row items-center space-x-2">
                 <span className="text-xl font-bold text-white">{item.title}:</span>
-                <span className="text-blue-400">
+                <span className="text-blue-400 break-all">
                   {item.title === "GitHub" ? (
                     <a
                       href={`https://${item.value}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline">
+                      className="hover:underline ">
                       {item.value}</a>
                   ) : item.title === "LinkedIn" ? (
                     <a
